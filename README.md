@@ -1,4 +1,5 @@
 Automated bash script to compile and install the latest **xrdp** (`devel` branch) with the modern **LVGL (v9.3+)** pre-session login interface and **xorgxrdp** on **Ubuntu 24.04 LTS**.
+
 ![Modern LVGL Login Screen](images/lvgl-preview.png)
 
 This installer is **Desktop Environment (DE) agnostic**—it sets up the core X11/RDP stack and leaves the choice of desktop environment up to you.
