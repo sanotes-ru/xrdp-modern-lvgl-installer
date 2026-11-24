@@ -19,7 +19,7 @@ apt install -y \
 
 echo "[2/6] Cloning and building LVGL library v9.3..."
 cd /tmp && rm -rf lvgl
-git clone --branch release/v9.3 https://github.com/lvgl/lvgl.git
+git clone --depth 1 --branch release/v9.3 https://github.com/lvgl/lvgl.git
 cd lvgl
 
 # Activate configuration file from template
@@ -54,7 +54,7 @@ ldconfig
 
 echo "[3/6] Building xrdp (devel branch) with LVGL and Imlib2 support..."
 cd /tmp && rm -rf xrdp
-git clone --branch devel --recursive https://github.com/neutrinolabs/xrdp.git
+git clone --depth 1 --branch devel --recursive --shallow-submodules https://github.com/neutrinolabs/xrdp.git
 cd xrdp
 ./bootstrap
 
@@ -66,7 +66,7 @@ make install
 
 echo "[4/6] Building xorgxrdp video driver (devel branch)..."
 cd /tmp && rm -rf xorgxrdp
-git clone --branch devel https://github.com/neutrinolabs/xorgxrdp.git
+git clone --depth 1 --branch devel https://github.com/neutrinolabs/xorgxrdp.git
 cd xorgxrdp
 ./bootstrap
 # Hardware 3D acceleration (glamor) is disabled to prevent Xorg crashes on virtual servers
