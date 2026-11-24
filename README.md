@@ -38,7 +38,7 @@ Before connecting via RDP, make sure you have:
 
 1. Download or clone this repository on your Ubuntu 24.04 server:
    ```bash
-   git clone https://github.com/sanotes-ru/xrdp-modern-lvgl-installer
+   git clone --depth 1 --branch release/v9.3  https://github.com/sanotes-ru/xrdp-modern-lvgl-installer
    cd xrdp-modern-lvgl-installer
    ```
 
