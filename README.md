@@ -134,9 +134,14 @@ You can customize the LVGL login screen in `/etc/xrdp/xrdp.ini` under the `[Glob
   ```ini
   ls_logo_filename=/path/to/your/logo.png
   ```
-- **Custom Background Image:**
+- **Custom Background Image & Scaling Mode:**
   ```ini
   ls_background_image=/path/to/your/wallpaper.png
+  ; Background scaling modes:
+  ; none   - display the image at its original resolution (centered/unscaled)
+  ; scale  - stretch the image to fill the entire screen (ignoring aspect ratio)
+  ; zoom   - scale the image proportionally to cover the screen (may crop edges)
+  ls_background_transform=none
   ```
 
 After making changes to `/etc/xrdp/xrdp.ini`, restart the service:
